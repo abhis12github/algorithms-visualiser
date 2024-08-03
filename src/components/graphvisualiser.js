@@ -27,7 +27,7 @@ function GraphVisualiser() {
     const FINISH_NODE_COL = 20;
     const [grid, setGrid] = useState([]);
     const [mouseIsPressed, setMouseIsPressed] = useState(false);
-    const [text, setText] = useState("Graph Visualizer");
+    const [text, setText] = useState("Graph Visualiser");
     const [algorithm, setAlgorithm] = useState(null);
     const [isDisable, setIsDisable] = useState(false);
     const [resetDisabled, setResetDiasabled] = useState(false);
@@ -204,7 +204,7 @@ function GraphVisualiser() {
             <div className="flex h-[100vh] w-[100%]">
 
                 <div className="w-[20%] h-[100vh] bg-blue-950 items-center flex-col">
-                    <h1 className="font-semibold text-yellow-300 text-2xl p-6 mt-3 mb-20">{text}</h1>
+                    <h1 className="font-semibold text-green-300 text-2xl p-6 mt-3 mb-20 ml-[15px] ">{text}</h1>
 
 
                     <div className="flex flex-col justify-center p-6 h-[45%] w-[100%]">

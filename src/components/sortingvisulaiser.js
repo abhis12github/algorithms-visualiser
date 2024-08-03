@@ -24,7 +24,7 @@ function SortingVisualiser() {
     const [size, setSize] = useState(90);
     const [speed, setSpeed] = useState(25);
     const [algorithm, setAlgorithm] = useState(null);
-    const [text, setText] = useState("Sorting Visualizer");
+    const [text, setText] = useState("Sorting Visualiser");
     const [isDisable, setIsDisable] = useState(false);
     const [resetDisabled, setResetDiasabled] = useState(false);
 
@@ -118,19 +118,19 @@ function SortingVisualiser() {
             <div className="flex h-[100vh] w-[100%]">
 
                 <div className="w-[20%] h-[100%] bg-blue-950 items-center flex-col">
-                    <h1 className="font-semibold text-yellow-300 text-2xl p-4 mt-3 mb-20 ml-[8px]">{text}</h1>
+                    <h1 className="font-semibold text-green-300 text-2xl p-4 mt-3 mb-20 ml-[15px]">{text}</h1>
 
 
                     <div className="flex flex-col justify-center p-6 h-[45%] w-[100%]">
                         <div className="mt-2 mb-2 flex flex-col">
-                            <label for="array-size" className="text-yellow-300 font-normal text-[13px] self-start pl-1 mb-2 ">Array Size</label>
+                            <label for="array-size" className="text-green-300 font-normal text-[13px] self-start pl-1 mb-2 ">Array Size</label>
                             <input type="range" id="array-size" name="size" min="80" max="180" value={size} step="5" disabled={isDisable} onChange={handleSize} ></input>
 
                         </div>
 
                         <div className="mt-2 mb-6 flex flex-col">
 
-                            <label for="speed" className="text-yellow-300 font-normal text-[13px] self-start pl-1 mb-2 ">Speed Range</label>
+                            <label for="speed" className="text-green-300 font-normal text-[13px] self-start pl-1 mb-2 ">Speed Range</label>
                             <input type="range" id="speed" name="speed" min="10" max="150" value={speed} step="5" disabled={isDisable} onChange={handleSpeed}></input>
 
                         </div>

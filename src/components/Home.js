@@ -1,41 +1,89 @@
-import React from "react";
-import homeimg from "../images/vecteezy_3d-male-character-pointing-left_24785728_5.png"
-import logo from "../images/logo.png";
+import React, { useEffect } from "react";
 import Card from "./card";
 import styles from "../styles/Features.module.css";
 import "../App.css";
+import "particles.js";
+import particleJSON from "../assets/particles.json";
+
 
 
 
 function Home() {
+    useEffect(() => {
+        let resizeTimeout;
+
+        const initParticles = () => {
+            // Destroy existing particles instance if it exists
+            if (window.pJSDom && window.pJSDom.length > 0) {
+                window.pJSDom[0].pJS.fn.vendors.destroypJS();
+                window.pJSDom = [];
+            }
+            // Initialize particles
+            window.particlesJS("particles-js", particleJSON);
+        };
+
+        const handleResize = () => {
+            // Clear the timeout if it exists
+            if (resizeTimeout) {
+                clearTimeout(resizeTimeout);
+            }
+            // Set a new timeout to reinitialize particles after resizing stops
+            resizeTimeout = setTimeout(() => {
+                // Manually adjust the canvas size
+                const particlesContainer = document.getElementById('particles-js');
+                if (particlesContainer) {
+                    const canvas = particlesContainer.querySelector('canvas');
+                    if (canvas) {
+                        canvas.width = particlesContainer.offsetWidth;
+                        canvas.height = particlesContainer.offsetHeight;
+                    }
+                }
+                initParticles();
+            }, 300); // Adjust the delay as needed
+        };
+
+        // Initialize particles initially
+        initParticles();
+
+        // Add resize event listener
+        window.addEventListener('resize', handleResize);
+
+        // Clean up event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            if (resizeTimeout) {
+                clearTimeout(resizeTimeout);
+            }
+        };
+    }, []);
+
+
+
+
     return (
         <div>
 
-            <div className="flex flex-col bg-blue-950 h-[100vh]">
+            <div className="flex flex-col bg-[#0E0E0E] h-[100vh]">
 
-                <div className="flex h-[8%] w-[100%] items-center justify-between fixed bg-blue-950">
-                    <img className="h-[36px] pl-8" src={logo}></img>
-                    <div className="flex w-[25%] justify-evenly">
-                        <h4 className="text-gray-300 p-3 hover:bg-yellow-300 hover:text-black"><a href="#Home">Home </a></h4>
-                        <h4 className="text-gray-300 p-3 hover:bg-yellow-300 hover:text-black"><a href="#Features">Features </a></h4>
-                        <h4 className="text-gray-300 p-3 hover:bg-yellow-300 hover:text-black"><a href="#AboutUs">About Us</a></h4>
+                <div className="flex h-[8%] w-[100%] items-center justify-between fixed bg-[#0E0E00E] z-20">
+                    <div></div>
+                    <div className="flex w-[25%] justify-evenly ">
+                        <h4 className="text-gray-300 p-3 hover:bg-green-300 hover:text-black"><a href="#Home">Home </a></h4>
+                        <h4 className="text-gray-300 p-3 hover:bg-green-300 hover:text-black"><a href="#Features">Features </a></h4>
+                        <h4 className="text-gray-300 p-3 hover:bg-green-300 hover:text-black"><a href="#AboutUs">About Us</a></h4>
                     </div>
                 </div>
-                <div className="h-[100%] w-[100%] m-0 p-0 flex justify-center items-center" id="Home">
 
-                    <div className="flex justify-center items-center h-[100%] w-[50%] p-8 mt-4">
-                        <img className="h-[90%] w-[90%] " src={homeimg}></img>
+                <div className="h-[90%] w-[100%] relative" id="Home">
+                    <div id="particles-js" className="h-[100%] w-[100%]"></div>
+                    <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center">
+                    <h1 className="font-heading text-6xl"><span className="text-green-500 tracking-widest">Algorithm</span><br></br><span className="text-white tracking-wider">Visulaiser</span></h1> 
+                        <p className="text-gray-300 font-light text-base mt-4">Algorithm Visualizer, a dynamic platform designed to demystify<br></br> the intricate processes of various algorithms through interactive visual representations.</p>
+                        <button className="h-[40px] w-[125px] border-solid border-[1.5px] border-green-400 mt-6 font-semibold text-green-200 hover:bg-green-400 hover:text-black">
+                            <a href="#Features">Get Started <i className="fa-solid fa-arrow-right"></i></a>
+                        </button>
                     </div>
-                    <div className="flex flex-col justify-center pl-8 w-[50%]">
-                        <h1 className="text-yellow-300 font-heading text-4xl font-semibold">Algorithms Visualiser</h1>
-                        <p className="  text-gray-300 font-light gap-8 text-base mt-[4px]">Algorithm Visualizer, a dynamic platform designed to demystify the intricate processes of various algorithms through interactive visual representations.</p>
-                        <button className="h-[40px] w-[125px] border-solid border-[1.5px] border-yellow-400 mt-6 font-semibold text-yellow-200 hover:bg-yellow-400 hover:text-black"><a href="#Features">Get Started  <i class="fa-solid fa-arrow-right"></i></a></button>
-                    </div>
-
-
                 </div>
-
-
 
             </div>
 
@@ -64,14 +112,14 @@ function Home() {
 
             </div>
 
-            <div className="h-[150px] w-[100%] bg-blue-950 flex justify-center items-center flex-col" id="AboutUs">
-                <h4 className="text-yellow-300 font-semibold">Follow me on :  </h4>
+            <div className="h-[150px] w-[100%] bg-[#0E0E0E] flex justify-center items-center flex-col" id="AboutUs">
+                <h4 className="text-green-300 font-semibold">Follow me on :  </h4>
                 <div className="mt-4 flex justify items-center">
-                <div className=" rounded-full flex items-center justify-center mb-[4px] mr-[8px] hover:bg-blue-950 text-yellow-300 hover:text-white"><a href="https://github.com/abhis12github"><i class="fa-brands fa-github fa-xl"></i></a></div>
-                
-                <div className=" text-yellow-300 rounded-full flex items-center justify-center mb-[4px] ml-[8px] hover:text-white"><a href="https://www.linkedin.com/in/abhishek-anand-0b3862257"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></div>
+                    <div className=" rounded-full flex items-center justify-center mb-[4px] mr-[8px] hover:bg-blue-950 text-green-300 hover:text-white"><a href="https://github.com/abhis12github"><i class="fa-brands fa-github fa-xl"></i></a></div>
+
+                    <div className=" text-green-300 rounded-full flex items-center justify-center mb-[4px] ml-[8px] hover:text-white"><a href="https://www.linkedin.com/in/abhishek-anand-0b3862257"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></div>
                 </div>
-                
+
 
             </div>
         </div>
@@ -79,3 +127,5 @@ function Home() {
 }
 
 export default Home;
+
+

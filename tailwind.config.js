@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     fontFamily:{
-      "heading": 'Righteous',
+      "heading": ['Blanka Regular','sans-serif'],
     },
     extend: {
       backgroundImage: {

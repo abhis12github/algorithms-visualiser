@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 
-body{
+body {
     font-family: 'Ubuntu', sans-serif;
+}
+
+@layer base {
+    @font-face {
+        font-family: 'Blanka Regular';
+        font-style: normal;
+        font-weight: normal;
+        src:url('/src/Fonts/Blanka-Regular.otf') format('opentype');
+    }
 }

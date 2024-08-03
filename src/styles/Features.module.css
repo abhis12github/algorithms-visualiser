@@ -1,5 +1,5 @@
 .feature{
-    background: -webkit-linear-gradient(bottom, #172554 0%,#172554 50%,#ffffff 50%,#ffffff 100%);
+    background: -webkit-linear-gradient(bottom, #0E0E0E 0%,#0E0E0E 50%,#ffffff 50%,#ffffff 100%);
     @apply h-[100%] w-[100%] flex flex-col items-center;
 }
 
