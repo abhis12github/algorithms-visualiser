@@ -1,70 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Algorithms Visulaizer
 
-## Available Scripts
+An interactive algorithm visualizer application to help users understand algorithmic concepts through dynamic animations. The application features 5 sorting, 2 searching, and 3 graph algorithms, allowing users to explore these algorithms interactively. It also includes adjustable animation speeds for customized visualizations and options to observe algorithm behaviors on diverse datasets, enhancing the depth of analysis and comprehension. Built with React, Tailwind CSS, JavaScript, DSA, and Particles.js, this tool is designed to make learning algorithms more engaging and accessible.
 
-In the project directory, you can run:
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Screenshot (150)](https://github.com/user-attachments/assets/125d975e-208d-4e6a-96c9-7f7926b60958)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screenshot (152)](https://github.com/user-attachments/assets/d0e4f27f-60df-4b95-8410-22556dc4ba3d)
 
-### `npm test`
+![Screenshot (151)](https://github.com/user-attachments/assets/56239695-3972-4fb4-b220-c5f40f06f0fb)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* React
+* TailwindCSS
+* Javascript
+* Particle.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 10 Algorithms Visulaisation
+- Adjustable Animation Speed
+- Ajustable Data Set
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation
 
-## Learn More
+Clone the Repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  git clone https://github.com/abhis12github/algorithms-visualiser
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Navigate to the Project Directory
+```bash
+    cd algorithms-visulaiser
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Install Dependencies
+```bash
+    npm install
+```
 
-### Analyzing the Bundle Size
+Start the Development Server
+```bash
+    npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This will start the development server and open the application in your default browser. The app will typically be accessible at http://localhost:3000.
+    
+## Future Aspects
+* Recursion Tree Visualisation 
+* DP Table Visualisation
+## Authors
 
-### Making a Progressive Web App
+- [Abhishek Anand](https://github.com/abhis12github)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
