@@ -26,7 +26,7 @@ An interactive algorithm visualizer application to help users understand algorit
 
 - 10 Algorithms Visulaisation
 - Adjustable Animation Speed
-- Ajustable Data Set
+- Adjustable Data Set
 
 
 
