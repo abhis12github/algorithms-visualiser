@@ -1,7 +1,26 @@
+import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 
-
+const url = "https://analytics-xi-five.vercel.app/api/events";
+    const headers = {
+      "Content-Type": "application/json",
+      Authorization: "Bearer vyxw66qlxcksptz9iq5jkq",
+    };
+    const eventData = {
+      name: "Learn More",//* required
+      domain: "algorithms-visualiser.vercel.app", //* required
+      description: "user wants to learn more about project",//optional
+    };
+  
+    const sendRequest = async () => {
+      axios
+        .post(url, eventData, { headers })
+        .then()
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    };
 
 function Card(props) {
     return (
@@ -9,7 +28,7 @@ function Card(props) {
             <div className="h-[60px] w-[60px] bg-green-300 rounded-full flex items-center justify-center mb-[4px]"><i class={props.source}></i></div>
             <h1 className="text-lg font-semibold text-blue-950 mb-[6px]">{props.title}</h1>
             <p className="text-gray-700 text-sm pl-2">{props.content}</p>
-            <button className="px-4 mx-7 my-7  text-blue-950 border-solid border-[1.5px] border-green-400 text-xs rounded-2xl py-[8px] font-semibold shadow-sm hover:bg-green-400 hover:text-white"><Link to={props.text}>Learn More</Link> </button>
+            <button className="px-4 mx-7 my-7  text-blue-950 border-solid border-[1.5px] border-green-400 text-xs rounded-2xl py-[8px] font-semibold shadow-sm hover:bg-green-400 hover:text-white" onClick={sendRequest}><Link to={props.text}>Learn More</Link> </button>
            
         </div>
 
