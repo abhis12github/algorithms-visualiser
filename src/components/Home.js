@@ -4,6 +4,7 @@ import styles from "../styles/Features.module.css";
 import "../App.css";
 import "particles.js";
 import particleJSON from "../assets/particles.json";
+import axios from "axios";
 
 function Home() {
     useEffect(() => {
@@ -67,7 +68,7 @@ function Home() {
     };
   
     const sendRequest = async () => {
-      axios
+      await axios
         .post(url, eventData, { headers })
         .then()
         .catch((error) => {
