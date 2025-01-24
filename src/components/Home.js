@@ -5,9 +5,6 @@ import "../App.css";
 import "particles.js";
 import particleJSON from "../assets/particles.json";
 
-
-
-
 function Home() {
     useEffect(() => {
         let resizeTimeout;
@@ -58,7 +55,25 @@ function Home() {
     }, []);
 
 
-
+    const url = "https://analytics-xi-five.vercel.app/api/events";
+    const headers = {
+      "Content-Type": "application/json",
+      Authorization: "Bearer {{apiKey}}",
+    };
+    const eventData = {
+      name: "Get started",//* required
+      domain: "algorithms-visualiser.vercel.app", //* required
+      description: "User getting started for project viewing",//optional
+    };
+  
+    const sendRequest = async () => {
+      axios
+        .post(url, eventData, { headers })
+        .then()
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    };
 
     return (
         <div>
@@ -79,7 +94,7 @@ function Home() {
                     <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center">
                     <h1 className="font-heading text-6xl"><span className="text-green-500 tracking-widest">Algorithm</span><br></br><span className="text-white tracking-wider">Visulaiser</span></h1> 
                         <p className="text-gray-300 font-light text-base mt-4">Algorithm Visualizer, a dynamic platform designed to demystify<br></br> the intricate processes of various algorithms through interactive visual representations.</p>
-                        <button className="h-[40px] w-[125px] border-solid border-[1.5px] border-green-400 mt-6 font-semibold text-green-200 hover:bg-green-400 hover:text-black">
+                        <button className="h-[40px] w-[125px] border-solid border-[1.5px] border-green-400 mt-6 font-semibold text-green-200 hover:bg-green-400 hover:text-black" onClick={sendRequest}>
                             <a href="#Features">Get Started <i className="fa-solid fa-arrow-right"></i></a>
                         </button>
                     </div>
