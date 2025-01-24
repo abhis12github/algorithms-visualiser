@@ -59,7 +59,7 @@ function Home() {
     const url = "https://analytics-xi-five.vercel.app/api/events";
     const headers = {
       "Content-Type": "application/json",
-      Authorization: "Bearer {{apiKey}}",
+      Authorization: "Bearer vyxw66qlxcksptz9iq5jkq",
     };
     const eventData = {
       name: "Get started",//* required
