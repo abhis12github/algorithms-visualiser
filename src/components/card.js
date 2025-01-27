@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const url = "https://analytics-xi-five.vercel.app/api/events";
     const headers = {
       "Content-Type": "application/json",
-      Authorization: "Bearer vyxw66qlxcksptz9iq5jkq",
+      Authorization: "Bearer qy29i1lkuq1gxy6kiaxdo",
     };
     const eventData = {
       name: "Learn More",//* required
